@@ -1,12 +1,13 @@
 Meteor.startup(function() {
     var arr = [];
-    for (var i=0, t=4; i<t; i++) {
-        arr.push(Math.round(Math.random() * t))
-    }
-    document.write(arr);
     Factory.define('task', Tasks, {
         name: function() { return Fake.word(); },
-        data: function() { return arr }
+        data: function() {
+                return
+                    for (var i=0, t=4; i<t; i++) {
+                        arr.push(Fake.Integer())
+                    }
+                }
     });
 
     if (Tasks.find({}).count() === 0) {
