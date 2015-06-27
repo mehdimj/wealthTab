@@ -9,7 +9,7 @@ Template.home.rendered = function() {
     duties.forEach(function(data){
         result.push({
             name : data.name,
-            data : data.duties
+            data : data.data
         })
     });
     console.log(result);

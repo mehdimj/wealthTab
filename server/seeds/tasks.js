@@ -7,16 +7,13 @@ Meteor.startup(function() {
         return arr;
     }
     generateInt();
-    console.log(arr)
-
     Factory.define('task', Tasks, {
         name: function() { return Fake.word(); },
-        data:function() { return generateInt()}
+        duties:function() { return generateInt()}
     });
     if (Tasks.find({}).count() === 0) {
-        _(5).times(function(n) {
+        _(6).times(function(n) {
             Factory.create('task');
         });
     }
-
 });
