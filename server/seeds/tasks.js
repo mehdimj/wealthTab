@@ -2,12 +2,7 @@ Meteor.startup(function() {
     var arr = [];
     Factory.define('task', Tasks, {
         name: function() { return Fake.word(); },
-        data: function() {
-                    for (var i=0, t=4; i<t; i++) {
-                        arr.push(Fake.Integer())
-                    }
-                    return arr;
-                }
+        data: function() {return [0,1,3,4,3]}
     });
 
     if (Tasks.find({}).count() === 0) {
