@@ -3,10 +3,10 @@ Meteor.startup(function() {
     Factory.define('task', Tasks, {
         name: function() { return Fake.word(); },
         data: function() {
-                return
                     for (var i=0, t=4; i<t; i++) {
                         arr.push(Fake.Integer())
                     }
+                    return arr;
                 }
     });
 
