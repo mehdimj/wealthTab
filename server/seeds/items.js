@@ -7,7 +7,7 @@ Meteor.startup(function() {
 
   if (Items.find({}).count() === 0) {
 
-    _(10).times(function(n) {
+    _(6).times(function(n) {
       Factory.create('item');
     });
   }
